@@ -5,33 +5,41 @@
 {% block title %} | Posts {% endblock title %}
 <!-- 1 -->
 {% block content %}
-<!-- Page Header -->
-<header class="masthead">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-heading">
-          <h1>Man must explore, and this is exploration at its greatest</h1>
-          <h2 class="subheading">
-            Problems look mighty small from 150 miles up
-          </h2>
-          <span class="meta"
-            >Posted by
-            <a href="#">Start Bootstrap</a>
-            on August 24, 2019</span
-          >
+
+<main>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Little Blog</h1>
+          <h3>The place where we write stuff</h3>
         </div>
       </div>
     </div>
-  </div>
-</header>
-<!-- Post Content -->
-<article>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">{{all_blogs.title}}</div>
-    </div>
-  </div>
-</article>
+  </header>
+  <section>
+    <article>
+      <div class="container bg-success">
+        <div class="row px-2 py-2 d-flex justify-content-around">
+          {% for blog in all_blogs %}
+          <div class="card m-2" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">{{ blog.title}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ blog.category }}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">
+                {{ blog.publish_date }}
+              </h6>
+              <p class="card-text">{{ blog.snippet }}</p>
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+
 {% endblock content %}
