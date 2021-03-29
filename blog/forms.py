@@ -15,15 +15,16 @@ class BlogForm(forms.ModelForm):
 
     class Meta:
         model = Blog
-        fields = ('title', 'category', 'content',)
+        fields = ('title', 'category', 'snippet', 'content',)
 
     def __init__(self, *args, **kwargs):
 
         super().__init__(*args, **kwargs)
 
         placeholders = {
-            'title': 'Your Blogs Title, 50 Characters max',
-            'content': 'Write your Blog in here',
+            'title': 'Title: Your Blogs Title, 50 Characters max.',
+            'content': 'Write your Blog in here.',
+            'snippet': 'Snippit: A lead into the blog.'
         }
 
         self.fields['title'].widget.attrs['autofocus'] = True
