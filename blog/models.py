@@ -18,7 +18,6 @@ class Category(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=50)
     category = models.CharField(max_length=150)
-    snippet = models.CharField(max_length=200)
     content = RichTextField(blank=True, null=True)
     publish_date = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
@@ -30,16 +29,16 @@ class Blog(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('blog:details', kwargs={'slug': self.slug})
+        return reverse('details', kwargs={'slug': self.slug})
 
     def get_update_url(self):
-        return reverse('blog:update', kwargs={'slug': self.slug})
+        return reverse('update', kwargs={'slug': self.slug})
 
     def get_delete_url(self):
-        return reverse('blog:delete', kwargs={'slug': self.slug})
+        return reverse('delete', kwargs={'slug': self.slug})
 
     def get_like_url(self):
-        return reverse('blog:like', kwargs={'slug': self.slug})
+        return reverse('like', kwargs={'slug': self.slug})
 
     @property
     def get_comment_count(self):

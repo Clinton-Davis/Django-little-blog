@@ -6,4 +6,28 @@
 <!-- 1 -->
 {% block content %}
 <!-- 1 -->
+<section id="blog_detail">
+  <div class="container center-block-col">
+    <div class="row my-4 d-flex justify-content-center">
+      <div class="col-10 blog_create-bg tile-shadow">
+        <h1 class="sfs headfont white mb-4">{{ blog.title|title }}</h1>
+        <div class="row">
+          <div class="col-4 headfont white">{{ blog.author|title }}</div>
+          <div class="col-4 headfont white">{{blog.category}}</div>
+          <div class="col-4 headfont white">
+            {{blog.publish_date|date:"d-m-Y" }}
+          </div>
+        </div>
+        <div class="row bg-white mt-3">
+          <div class="col-12 text-left">
+            <h3>{{ blog.snippet|safe}}</h3>
+          </div>
+        </div>
+        <div class="row bg-white">
+          <div class="col-12">{{ blog.content|safe}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock content %}

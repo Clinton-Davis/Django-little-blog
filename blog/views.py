@@ -63,7 +63,6 @@ def CategoryView(request, category):
 
 
 class BlogDetailView(DetailView):
-    """(Logic by Mat @ JustDjango) Understood and implemented."""
     model = Blog
 
     def post(self, *args, **kwargs):
@@ -75,8 +74,8 @@ class BlogDetailView(DetailView):
             blogcomment.user = self.request.user
             blogcomment.blog = blog
             blogcomment.save()
-            return redirect("blog:details", slug=blog.slug)
-        return redirect("blog:details", slug=self.get_object().slug)
+            return redirect("details", slug=blog.slug)
+        return redirect("details", slug=self.get_object().slug)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
