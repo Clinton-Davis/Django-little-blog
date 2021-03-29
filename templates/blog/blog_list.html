@@ -11,7 +11,7 @@
     <div id="blog_headder-image" class="container-fluid">
       <div class="row d-flex align-items-center">
         <div class="col-12 text-center">
-          <h1 class="gfs headfont white b-text-shadow">Little Blog</h1>
+          <h1 class="gfs headfont white b-text-shadow">Little Blogs</h1>
           <h3 class="sfs w-text-shadow">When Life Gives You Lemons</h3>
         </div>
       </div>
@@ -39,6 +39,8 @@
               <a href="#" class="btn btn-info btn-outline-dark">Read Blog</a>
             </div>
           </div>
+          {% empty %}
+          <h2 class="headfont text-center">No Blogs as yet</h2>
 
           {% endfor %}
         </div>

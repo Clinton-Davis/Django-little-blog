@@ -16,7 +16,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a
-            class="nav-link active headfont"
+            class="nav-link headfont"
             aria-current="page"
             href="{% url 'home' %}"
             >Home</a
@@ -25,6 +25,16 @@
         <li class="nav-item">
           <a class="nav-link headfont" href="{% url 'create' %}"
             >Write a Blog</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link headfont" href="{% url 'accounts:register' %}"
+            >Register</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link headfont" href="{% url 'accounts:login' %}"
+            >Login</a
           >
         </li>
       </ul>
