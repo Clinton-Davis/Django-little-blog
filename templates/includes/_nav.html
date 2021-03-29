@@ -1,33 +1,43 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand headfont" href="{% url 'home' %}">Little Blogs</a>
     <button
-      class="navbar-toggler navbar-toggler-right"
+      class="navbar-toggler"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbarResponsive"
-      aria-controls="navbarResponsive"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      Menu
-      <i class="fas fa-bars"></i>
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a
+            class="nav-link active headfont"
+            aria-current="page"
+            href="{% url 'home' %}"
+            >Home</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="post.html">Sample Post</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link headfont" href="{% url 'create' %}"
+            >Write a Blog</a
+          >
         </li>
       </ul>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          name="search"
+        />
+        <button class="btn btn-outline-info" type="submit">Search</button>
+      </form>
     </div>
   </div>
 </nav>

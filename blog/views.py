@@ -98,11 +98,10 @@ class BlogCreateView(LoginRequiredMixin, CreateView):
     """
     Uses the 'blog_form.html' as it needs the inputs,
     The context is changed to 'create', 
-    (Logic by Mat @ JustDjango) Understood and implemented.
     """
     form_class = BlogForm
     model = Blog
-    success_url = '/blog/'
+    success_url = '/'
 
     def form_valid(self, form):
         form.instance.author = self.request.user

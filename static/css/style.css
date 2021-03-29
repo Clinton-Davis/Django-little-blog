@@ -1,9 +1,8 @@
-/* * {
-  padding: 0;
-  margin: 0;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap");
+
 html {
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -13,17 +12,87 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 20rem;
-  background-color: lightblue;
 }
 section {
   height: fit-content;
 }
 
-#mainNav {
-  background-color: rgb(136, 136, 136);
+.headfont {
+  font-family: "Dela Gothic One", sans-serif;
+}
+.white {
+  color: rgb(233, 232, 232);
+}
+.b-text-shadow {
+  text-shadow: 11px 10px 5px rgba(0, 0, 0, 0.75);
+}
+.w-text-shadow {
+  text-shadow: 1px 1px 5px rgba(252, 252, 252, 0.75);
 }
 
+.gfs {
+  font-size: 6rem;
+}
+.sfs {
+  font-size: 3rem;
+}
+.center-block-justify {
+  display: flex;
+  justify-content: center;
+}
+.center-block-col {
+  display: flex;
+  flex-direction: column;
+}
+.tile-shadow {
+  box-shadow: 0px 2px 21px -1px rgba(0, 0, 0, 0.75),
+    0px 2px 21px -1px rgba(0, 0, 0, 0.5) inset;
+}
+
+#blog_headder-image {
+  background-image: url(/static/img/manUp.webp);
+  background-position: 0% 80%;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  min-height: 26rem;
+}
+#blog_list {
+  background-color: black;
+}
+.card {
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card:hover {
+  box-shadow: 0px 2px 21px -1px rgba(0, 0, 0, 0.75);
+}
 .card-body {
   min-height: 12rem;
+}
+
+/* Create Page  */
+#blog_create-img {
+  background-image: url(/static/img/manUp.webp);
+  background-position: 0% 80%;
+  background-repeat: no-repeat;
+  /*Donotrepeattheimage*/
+  background-size: cover;
+  /*Resizethebackgroundimagetocovertheentirecontainer*/
+  min-height: 100vh;
+}
+
+.blog_create-bg {
+  text-align: center;
+  background-color: rgba(102, 102, 102, 0.74);
+  padding: 1rem 2rem;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }

@@ -11,10 +11,8 @@ from blog.views import (
     CategoryView
 )
 
-app_name = 'blog'
-
 urlpatterns = [
-    path('', BlogListView.as_view(), name='list'),
+    path('', BlogListView.as_view(), name='home'),
     path('search/', SearchView.as_view(), name='search'),
     path('create/',  BlogCreateView.as_view(), name='create'),
     path('<slug>/', BlogDetailView.as_view(), name='details'),
