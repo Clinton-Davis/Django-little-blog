@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap");
+
+html {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
+main {
+  min-height: 100vh;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  height: fit-content;
+}
+
+.headfont {
+  font-family: "Dela Gothic One", sans-serif;
+}
+.white {
+  color: rgb(233, 232, 232);
+}
+.b-text-shadow {
+  text-shadow: 11px 10px 5px rgba(0, 0, 0, 0.75);
+}
+.w-text-shadow {
+  text-shadow: 1px 1px 5px rgba(252, 252, 252, 0.75);
+}
+
+.gfs {
+  font-size: 6rem;
+}
+.sfs {
+  font-size: 3rem;
+}
+.center-block-justify {
+  display: flex;
+  justify-content: center;
+}
+.center-block-col {
+  display: flex;
+  flex-direction: column;
+}
+.tile-shadow {
+  box-shadow: 0px 2px 21px -1px rgba(0, 0, 0, 0.75),
+    0px 2px 21px -1px rgba(0, 0, 0, 0.5) inset;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #314755 0%,
+    #26a0da 51%,
+    #314755 100%
+  );
+}
+.btn-grad {
+  padding: 0.5rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+.btn-grad:active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+#blog_headder-image {
+  background-image: url(/static/img/manUp.webp);
+  background-position: 0% 80%;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  min-height: 26rem;
+}
+#blog_list {
+  background-color: black;
+}
+.card {
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card:hover {
+  box-shadow: 0px 2px 21px -1px rgba(0, 0, 0, 0.75);
+}
+.card-title {
+  height: 5rem;
+}
+
+/* Create Page  */
+#blog_create-img {
+  background-image: url(/static/img/manUp.webp);
+  background-position: 0% 80%;
+  background-repeat: no-repeat;
+  /*Donotrepeattheimage*/
+  background-size: cover;
+  /*Resizethebackgroundimagetocovertheentirecontainer*/
+  min-height: 100vh;
+}
+
+.blog_create-bg {
+  background-color: rgba(102, 102, 102, 0.74);
+  padding: 1rem 2rem;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+/* LOGIN / REG PAGE  */
+
+#login {
+  min-height: 100vh;
+  background-image: url(/static/img/manUp.webp);
+  background-position: 0% 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#register {
+  min-height: 100vh;
+  background-image: url(/static/img/manUp.webp);
+  background-position: 0% 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* BLOG DETAILS PAGE  */
+#blog_detail {
+  min-height: 100vh;
+  background-image: url(/static/img/manUp.webp);
+  background-position: 0% 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
