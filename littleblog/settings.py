@@ -79,9 +79,11 @@ DATABASES = {
         'NAME': env('NAME'),
         'USER': env('USER'),
         'PASSWORD': env('PASSWORD'),
-        'HOST' : env('HOST')
+        'HOST' : env('HOST'),
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
