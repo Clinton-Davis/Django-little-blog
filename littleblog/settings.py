@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'littleblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env('NAME'),
-        'USER': env('USER'),
-        'PASSWORD': env('PASSWORD'),
-        'HOST' : env('HOST'),
-        'PORT': '5432',
+        'NAME': env('RDS_DB_NAME'),
+        'USER': env('RDS_USERNAME'),
+        'PASSWORD': env('RDS_PASSWORD'),
+        'HOST' : env('RDS_HOSTNAME'),
+        'PORT': 5432,
     }
 }
 
